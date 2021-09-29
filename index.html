@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Gradient Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(274deg, #7ec9e6, #57d9c9, #7ce098, #fabf4d, #f18d52,
+                    #e95758, #f583b4, #cb88ef, #8669d6, #5381e8);
+            background-size: 2000% 2000%;
+            animation:gradient 30s ease infinite
+        }
+
+        @keyframes gradient{
+            0%{
+                background-position: 0% 51%;
+            }
+            50%{
+                background-position: 100% 50%;
+
+            }
+            100%{
+                background-position: 0% 51%;
+            }
+        }
+
+        .banner-text{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-text">
+        <h1>
+            Welcome to UI GEEKS
+        </h1>
+    </div>
+</body>
+
+</html>
